@@ -105,4 +105,62 @@ function products(arr){
 
 }
 //[108, 36, 12, 27]
-console.log(products([1, 3, 9, 4]));
+//console.log(products([1, 3, 9, 4]));
+
+
+/*
+[[1,0,1,1,0],
+[0,1,1,1,0],
+[1,1,1,1,1],
+[1,0,1,1,1],
+[1,1,1,1,1]];
+*/
+
+/*
+[[0,0,0,0,0],
+[0,0,0,0,0],
+[0,0,1,1,0],
+[0,0,0,0,0],
+[0,0,1,1,0]];
+*/
+
+function arraySearch(arr){
+  let result = []
+  for (let i=0; i<arr.length; i++){
+    let aux = []
+
+    if (arr[i].includes(0)){
+
+    }else{
+
+    }
+
+    for (let j=0; j<arr[i].length; j++){
+      /*
+      let res = 1;
+      for (let k=0; k<arr[i].length; k++){
+        if (arr[i][k] === 0){
+          res = 0
+          break;
+        }
+      }
+      for (let k=0; k<arr[i].length; k++){
+        if (arr[i][k] === 0){
+          res = 0
+          break;
+        }
+      }*/
+
+      aux.push(res)
+    }
+    result.push(aux)
+  }
+}
+const arr = [[1,0,1,1,0],
+[0,1,1,1,0],
+[1,1,1,1,1],
+[1,0,1,1,1],
+[1,1,1,1,1]];
+
+console.log(arr);
+console.log(arraySearch(arr));
