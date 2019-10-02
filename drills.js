@@ -43,3 +43,35 @@ function maxSum(arr) {
 
 // console.log(maxSum([-4, 6, -3, 5, -2, 1]));     //12
 
+
+//Input:[1, 3, 6, 8, 11] and [2, 3, 5, 8, 9, 10]
+//Output:[1, 2, 3, 3, 5, 6, 8, 8, 9, 10, 11]
+
+function mergeArr(arr1, arr2) {
+  let result = [];
+  let auxFlag = true;
+  let i = 0;
+  let j = 0;
+  while (auxFlag){
+    if (i<arr1.length && j<arr2.length){
+      if( arr1[i] < arr2[j]){
+        result.push(arr1[i])
+        i++
+      }else{
+        result.push(arr2[j])
+        j++
+      }
+    }else if (i< arr1.length){
+      result.push(arr1[i])
+      i++
+    }else if (j< arr2.length){
+      result.push(arr2[j])
+      j++
+    }else{
+      auxFlag=false
+    }
+  }
+  return result;
+}
+
+//console.log(mergeArr([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
