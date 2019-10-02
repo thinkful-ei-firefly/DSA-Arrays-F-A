@@ -75,3 +75,17 @@ function mergeArr(arr1, arr2) {
 }
 
 //console.log(mergeArr([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]));
+
+
+function urlify(str){
+    let result = ''
+    for(let i = 0; i < str.length; i++){
+        if (str[i] !== 'a' && str[i] !== 'e'  && str[i] !== 'i' && str[i] !== 'o'  && str[i] !== 'u'   ){
+            
+            result += str[i]
+        }
+    }
+    return result;
+}
+
+// console.log(urlify('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')); //'Bttl f th Vwls: Hw vs. Grzny'
