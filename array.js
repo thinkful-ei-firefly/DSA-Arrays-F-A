@@ -83,6 +83,7 @@ function main(){
    console.log(arr);
 
    arr.push("tauhida");
+   console.log(arr.get(0));
    console.log(arr);
 }
 
