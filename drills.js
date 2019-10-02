@@ -157,3 +157,9 @@ const arr = [[1,0,1,1,0],
 
 //console.log(arr);
 //console.log(arraySearch(arr));
+function stringRotation(str1, str2) {
+    let merge = str1 + str1 ;
+    return merge.includes (str2);
+}
+ console.log(stringRotation('amazon', 'azonam'));
+ 
