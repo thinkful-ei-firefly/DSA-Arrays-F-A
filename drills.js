@@ -81,11 +81,28 @@ function reomveChar(str){
     let result = ''
     for(let i = 0; i < str.length; i++){
         if (str[i] !== 'a' && str[i] !== 'e'  && str[i] !== 'i' && str[i] !== 'o'  && str[i] !== 'u'   ){
-            
+
             result += str[i]
         }
     }
     return result;
 }
 
-console.log(reomveChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')); //'Bttl f th Vwls: Hw vs. Grzny'
+//console.log(reomveChar('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou')); //'Bttl f th Vwls: Hw vs. Grzny'
+
+function products(arr){
+  let result = [];
+  for (let i = 0 ; i < arr.length; i ++ ){
+    let prod = 1
+     for (let j = 0; j < arr.length; j++){
+       if (i !== j){
+         prod *= arr[j]
+       }
+     }
+     result.push(prod);
+  }
+  return result;
+
+}
+//[108, 36, 12, 27]
+console.log(products([1, 3, 9, 4]));
