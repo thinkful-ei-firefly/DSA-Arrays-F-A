@@ -16,3 +16,10 @@ What is the length, capacity and memory address of your array? Explain the resul
 length: 6   ->  There are 6 number
 capacity: 12  ->  Each time that is over capacity, it should be triple of the size of memory allocated.
 memory address: 3 ->  After resize capacity the pointer is moving to current pointer + the last capacity.
+
+3. What is the length, capacity, and address of your array? Explain the result of your program after adding the new lines of code. 
+
+ length: 3, -> length is decreased each time we call pop method.
+ capacity: 12, -> pop method does not change capacity.
+ address: 3 -> pop method does not change address.
+

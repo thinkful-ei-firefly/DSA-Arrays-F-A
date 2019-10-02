@@ -26,6 +26,17 @@ class Array {
       memory.free(oldPtr);
       this._capacity = size;
     }
+
+    pop() {
+        if (this.length == 0) {
+            throw new Error ('Index error');
+        }
+        const value = memory.get(this.ptr + this.length - 1);
+        this.length --;
+        return value;
+    }
+
+    
 }
 
 Array.SIZE_RATIO = 3;
@@ -37,18 +48,29 @@ function main(){
 
   let arr = new Array();
 
-  arr.push(3);
-  console.log(arr);
-  arr.push(5);
-  console.log(arr);
-  arr.push(15);
-  console.log(arr);
-  arr.push(19);
-  console.log(arr);
-  arr.push(45);
-  console.log(arr);
-  arr.push(10);
-  console.log(arr);
+//   arr.push(3);
+//   console.log(arr);
+//   arr.push(5);
+//   console.log(arr);
+//   arr.push(15);
+//   console.log(arr);
+//   arr.push(19);
+//   console.log(arr);
+//   arr.push(45);
+//   console.log(arr);
+//   arr.push(10);
+//   console.log(arr);
+//   arr.pop();
+//   console.log(arr);
+//   arr.pop();
+//   console.log(arr);
+//   arr.pop();
+//   console.log(arr);
+
+
+
 }
 
 main();
+
+
