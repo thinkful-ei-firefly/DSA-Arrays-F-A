@@ -27,6 +27,13 @@ class Array {
       this._capacity = size;
     }
 
+    get(index) {
+        if (index < 0 || index >= this.length) {
+            throw new Error('Index error');
+        }
+        return memory.get(this.ptr + index);
+    }
+
     pop() {
         if (this.length == 0) {
             throw new Error ('Index error');
@@ -36,7 +43,7 @@ class Array {
         return value;
     }
 
-    
+
 }
 
 Array.SIZE_RATIO = 3;
@@ -48,29 +55,35 @@ function main(){
 
   let arr = new Array();
 
-//   arr.push(3);
-//   console.log(arr);
-//   arr.push(5);
-//   console.log(arr);
-//   arr.push(15);
-//   console.log(arr);
-//   arr.push(19);
-//   console.log(arr);
-//   arr.push(45);
-//   console.log(arr);
-//   arr.push(10);
-//   console.log(arr);
-//   arr.pop();
-//   console.log(arr);
-//   arr.pop();
-//   console.log(arr);
-//   arr.pop();
-//   console.log(arr);
+   arr.push(3);
+   console.log(arr);
+   arr.push(5);
+   console.log(arr);
+   arr.push(15);
+   console.log(arr);
+   arr.push(19);
+   console.log(arr);
+   arr.push(45);
+   console.log(arr);
+   arr.push(10);
+   console.log(arr);
+   arr.pop();
+   console.log(arr);
+   arr.pop();
+   console.log(arr);
+   arr.pop();
+   console.log(arr);
 
 
+   console.log(arr.get(0));
 
+   arr.pop();
+   arr.pop();
+   arr.pop();
+   console.log(arr);
+
+   arr.push("tauhida");
+   console.log(arr);
 }
 
 main();
-
-
